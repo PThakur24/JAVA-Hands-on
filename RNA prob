@@ -1,0 +1,21 @@
+class RnaTranscription {
+    String transcribe(String dnaStrand) {
+        StringBuilder builder = new StringBuilder();
+        for(int i=0;i<dnaStrand.length();i++){
+            //char c= dnaStrand.charAt(i);
+            if(dnaStrand.charAt(i) == 'G'){
+                builder.append('C');
+            }
+            if(dnaStrand.charAt(i) == 'C'){
+                builder.append('G');
+            }
+            if(dnaStrand.charAt(i) == 'T'){
+                builder.append('A');
+            }
+            if(dnaStrand.charAt(i) == 'A'){
+                builder.append('U');
+            }
+        }
+        return builder.toString();
+    }
+}
